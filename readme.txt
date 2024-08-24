@@ -3,7 +3,11 @@
 /ray_tracer
 |---/src
 |   |--- /features
+|   |    |--- feature1.cpp
+|   |    ...
 |   |--- /include
+|   |    |---feature1.hpp
+|   |    ...
 |   |--- main.cpp
 |---/tests
 |   |---/test_feature1.cpp
