@@ -1,0 +1,11 @@
+# ignore visual studio folders
+.vs/
+
+#ignore x64
+x64/
+
+# ignore packages folder
+packages/
+
+# ignore .user files
+*.user

@@ -1,9 +1,9 @@
-#include "../include/tuple.h"
+#include "../include/tuple.hpp"
 #include <cmath>
 
 
-bool equal(const float& a, const float& b) {
-    const float epsilon = 0.00001;
+bool equal(const double& a, const double& b) {
+    const double epsilon = 0.00001;
     if (std::fabs(a - b) < epsilon)
         return true;
     return false;
@@ -36,7 +36,7 @@ tuple negate(const tuple& a) {
     return result;
 }
 
-tuple scalar_mult(const tuple& a, const float& num) {
+tuple scalar_mult(const tuple& a, const double& num) {
     tuple result;
     result.x = a.x * num;
     result.y = a.y * num;
@@ -45,7 +45,7 @@ tuple scalar_mult(const tuple& a, const float& num) {
     return result;
 }
 
-tuple scalar_div(const tuple& a, const float& num) {
+tuple scalar_div(const tuple& a, const double& num) {
     tuple result;
     result.x = a.x / num;
     result.y = a.y / num;
@@ -54,14 +54,14 @@ tuple scalar_div(const tuple& a, const float& num) {
     return result;
 }
 
-float magnitude(const tuple& a) {
-    float result = 0.0;
+double magnitude(const tuple& a) {
+    double result = 0.0;
     result = sqrtf(a.x * a.x + a.y * a.y + a.z * a.z + a.w * a.w);
     return result;
 }
 
 tuple normalize(const tuple& a) {
-    float mgni = magnitude(a);
+    double mgni = magnitude(a);
     tuple result;
     result.x = a.x / mgni;
     result.y = a.y / mgni;
@@ -70,8 +70,8 @@ tuple normalize(const tuple& a) {
     return result;
 }
 
-float dot(const tuple& a, const tuple& b) {
-    float result = 0.0;
+double dot(const tuple& a, const tuple& b) {
+    double result = 0.0;
     result = a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
     return result;
 }

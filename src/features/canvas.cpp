@@ -1,21 +1,21 @@
-#include "../include/canvas.h"
+#include "../include/canvas.hpp"
 
 //write a pixel to the canvas
-void canvas::write_pixel(float x, float y, const color& c) {
+void canvas::write_pixel(double x, double y, const color& c) {
     if(x >= 0 && x < width && y >= 0 && y < height) {
         pixels[x][y] = c;
     }
 }
 
 //read a pixel from the canvas
-color canvas::pixel_at(float x, float y) const {
+color canvas::pixel_at(double x, double y) const {
     if(x >= 0 && x < width && y >= 0 && y < height) {
         return pixels[x][y];
     }
     return color(0,0,0); // return black if out of bounds
 }
 
-int clamp(float value) {
+int clamp(double value) {
     return std::max(0, std::min(255, static_cast<int>(value * 255 + 0.5)));
 }
 
@@ -56,5 +56,6 @@ std::string canvas_to_ppm(const canvas &c) {
 
     return ppm.str();
     */
+    return "";
 }
 

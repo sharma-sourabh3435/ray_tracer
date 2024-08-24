@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/canvas.h"
+#include "src/include/canvas.hpp"
 
 int main() {
     //basic test
