@@ -1,7 +1,6 @@
 #include "../include/tuple.hpp"
 #include <cmath>
 
-
 bool equal(const double& a, const double& b) {
     const double epsilon = 0.00001;
     if (std::fabs(a - b) < epsilon)
@@ -31,7 +30,7 @@ tuple negate(const tuple& a) {
     tuple result;
     result.x = -a.x;
     result.y = -a.y;
-    result.z = -a.y;
+    result.z = -a.z;
     result.w = -a.w;
     return result;
 }
@@ -56,7 +55,7 @@ tuple scalar_div(const tuple& a, const double& num) {
 
 double magnitude(const tuple& a) {
     double result = 0.0;
-    result = sqrtf(a.x * a.x + a.y * a.y + a.z * a.z + a.w * a.w);
+    result = sqrt(a.x * a.x + a.y * a.y + a.z * a.z + a.w * a.w);
     return result;
 }
 
