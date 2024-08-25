@@ -1,5 +1,5 @@
-#ifndef TUPLE_H
-#define TUPLE_H
+#ifndef TUPLE_HPP
+#define TUPLE_HPP
 
 // tuple initiates to (0,0,0,0)
 struct tuple {
@@ -58,4 +58,4 @@ bool is_point(const tuple& b);
 
 projectile tick(const environment& env, const projectile& proj);
 
-#endif
+#endif // TUPLE_HPP
