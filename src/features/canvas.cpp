@@ -2,17 +2,17 @@
 
 //write a pixel to the canvas
 void canvas::write_pixel(double x, double y, const color& c) {
-    if(x >= 0 && x < width && y >= 0 && y < height) {
+    if(x >= 0.0 && x < width && y >= 0.0 && y < height) {
         pixels[x][y] = c;
     }
 }
 
 //read a pixel from the canvas
 color canvas::pixel_at(double x, double y) const {
-    if(x >= 0 && x < width && y >= 0 && y < height) {
+    if(x >= 0.0 && x < width && y >= 0.0 && y < height) {
         return pixels[x][y];
     }
-    return color(0,0,0); // return black if out of bounds
+    return color(0.0,0.0,0.0); // return black if out of bounds
 }
 
 int clamp(double value) {
