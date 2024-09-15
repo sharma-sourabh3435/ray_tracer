@@ -13,8 +13,7 @@ public:
     double height;
     std::vector<std::vector<color>> pixels;
 
-    canvas(double w, double h) : width(w), height(h), pixels(w, 
-    std::vector<color>(h, color(0,0,0))) {}
+    canvas(double w, double h) : width(w), height(h), pixels(w, std::vector<color>(h, color(0.0, 0.0, 0.0))) {}
 
     void write_pixel(double x, double y, const color& c);
     color pixel_at(double x, double y) const;
